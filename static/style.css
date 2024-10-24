@@ -5,14 +5,15 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1e90ff; /* Blue background */
+    font-family: 'Tahoma', sans-serif; /* فونت‌های مناسب برای متن فارسی */
+    background-color: #1e90ff; /* پس‌زمینه آبی */
     color: #333;
-    display: flex;
+    display: flex; 
     justify-content: center;
     align-items: center;
     height: 100vh;
     padding: 20px;
+    direction: rtl; /* جهت‌دهی به راست برای کل صفحه */
 }
 
 .container {
@@ -27,8 +28,11 @@ body {
 }
 
 .logo {
-    max-width: 150px;
-    margin-bottom: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    overflow: hidden;
 }
 
 h1 {
@@ -48,7 +52,7 @@ form {
 }
 
 label {
-    text-align: left;
+    text-align: right; /* متن‌های لیبل به راست تراز می‌شوند */
     color: #333;
     font-weight: bold;
 }
@@ -59,6 +63,7 @@ input[type="text"] {
     border-radius: 5px;
     font-size: 16px;
     width: 100%;
+    text-align: right; /* متن ورودی هم راست‌چین می‌شود */
 }
 
 input[type="text"]:focus {
@@ -83,12 +88,12 @@ button:hover {
 
 #output {
     margin-top: 20px;
-    text-align: left;
+    text-align: right; /* عنوان نتیجه هم راست‌چین شود */
 }
 
 textarea#result-text {
     width: 100%;
-    height: 150px;
+    height: 200px; /* ارتفاع بیشتر برای جعبه متنی */
     padding: 10px;
     font-size: 16px;
     border: 1px solid #1e90ff;
@@ -96,6 +101,9 @@ textarea#result-text {
     background-color: #f0f8ff;
     color: #333;
     resize: none;
+    text-align: right; /* متن خروجی راست‌چین شود */
+    direction: rtl; /* جهت نمایش متن به صورت راست به چپ */
+    overflow-y: scroll; /* برای نمایش اسکرول در صورتی که متن زیاد شود */
 }
 
 textarea#result-text:focus {

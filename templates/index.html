@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Text Processor</title>
+    <title>پردازش متن</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="container">
-        <!-- Include your logo -->
-        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+        <!-- لوگوی شما -->
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="لوگو" class="logo">
 
-        <h1>Text Processor</h1>
-        <p>Enter your text below and see the result.</p>
+        <h1>طراحی هوشمند سوال</h1>
+        <!-- <p>لینک محتوای آموزشی خود را وارد نمایید:</p> -->
+        <!-- use some line space -->
+        <br>
+        <br>
         <form id="input-form">
-            <label for="user-input">Your Text:</label>
-            <input type="text" id="user-input" name="user-input" required placeholder="Type something..." autofocus>
-            <button type="submit">Submit</button>
+            <label for="user-input">لینک محتوا :</label>
+            <input type="text" id="user-input" name="user-input" required placeholder="متنی تایپ کنید..." autofocus>
+            <button type="submit">ارسال</button>
         </form>
 
         <div id="output">
-            <h2>Result:</h2>
-            <!-- Larger text box for output -->
-            <textarea id="result-text" readonly>Your result will appear here...</textarea>
+            <h2>نتیجه:</h2>
+            <!-- جعبه متنی بزرگ‌تر برای نمایش خروجی -->
+            <textarea id="result-text" readonly>سوالات  طراحی شده ....</textarea>
         </div>
     </div>
 
-    <!-- Include the JavaScript -->
+    <!-- اضافه کردن جاوا اسکریپت -->
     <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>
