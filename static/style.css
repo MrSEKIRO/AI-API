@@ -5,45 +5,43 @@
 }
 
 body {
-    font-family: 'Tahoma', sans-serif; /* فونت‌های مناسب برای متن فارسی */
-    background-color: #1e90ff; /* پس‌زمینه آبی */
+    font-family: 'Tahoma', sans-serif;
+    background-color: #1e90ff;
     color: #333;
-    display: flex; 
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     padding: 20px;
-    direction: rtl; /* جهت‌دهی به راست برای کل صفحه */
+    direction: rtl;
 }
 
-.container {
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 100%;
+.header {
     text-align: center;
-    position: relative;
+    margin-bottom: 20px;
 }
 
 .logo {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin: 0 auto 20px;
-    overflow: hidden;
+    margin-bottom: 10px;
 }
 
 h1 {
     color: #1e90ff;
-    margin-bottom: 10px;
-    font-family: 'Vazir', 'Tahoma', sans-serif; /* فونت مناسب برای متن فارسی */
+    font-family: 'Vazir', 'Tahoma', sans-serif;
 }
 
-p {
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
     margin-bottom: 20px;
-    color: #555;
 }
 
 form {
@@ -53,7 +51,7 @@ form {
 }
 
 label {
-    text-align: right; /* متن‌های لیبل به راست تراز می‌شوند */
+    text-align: right;
     color: #333;
     font-weight: bold;
 }
@@ -64,7 +62,7 @@ input[type="text"] {
     border-radius: 5px;
     font-size: 16px;
     width: 100%;
-    text-align: right; /* متن ورودی هم راست‌چین می‌شود */
+    text-align: right;
 }
 
 input[type="text"]:focus {
@@ -88,27 +86,35 @@ button:hover {
 }
 
 #output {
-    margin-top: 20px;
-    text-align: right; /* عنوان نتیجه هم راست‌چین شود */
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+#output h2 {
+    color: white;
 }
 
 textarea#result-text {
     width: 100%;
-    height: 200px; /* ارتفاع بیشتر برای جعبه متنی */
-    padding: 10px;
+    height: 300px;
+    padding: 20px;
     font-size: 16px;
-    border: 1px solid #1e90ff;
-    border-radius: 5px;
+    border: 3px solid black; /* Black border */
+    border-radius: 50px; /* Circular border */
     background-color: #f0f8ff;
     color: #333;
     resize: none;
-    text-align: right; /* متن خروجی راست‌چین شود */
-    direction: rtl; /* جهت نمایش متن به صورت راست به چپ */
-    overflow-y: scroll; /* برای نمایش اسکرول در صورتی که متن زیاد شود */
-    font-family: 'Tahoma', sans-serif; /* فونت مناسب برای متن فارسی */
+    text-align: right;
+    direction: rtl;
+    overflow-y: auto;
+    font-family: 'Tahoma', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a floating effect */
 }
 
 textarea#result-text:focus {
     outline: none;
-    border-color: #4682b4;
+    border-color: black; /* Black border stays on focus */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Slightly darker glow on focus */
 }
