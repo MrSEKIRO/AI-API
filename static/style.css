@@ -38,6 +38,7 @@ body {
 h1 {
     color: #1e90ff;
     margin-bottom: 10px;
+    font-family: 'Vazir', 'Tahoma', sans-serif; /* فونت مناسب برای متن فارسی */
 }
 
 p {
@@ -104,6 +105,7 @@ textarea#result-text {
     text-align: right; /* متن خروجی راست‌چین شود */
     direction: rtl; /* جهت نمایش متن به صورت راست به چپ */
     overflow-y: scroll; /* برای نمایش اسکرول در صورتی که متن زیاد شود */
+    font-family: 'Tahoma', sans-serif; /* فونت مناسب برای متن فارسی */
 }
 
 textarea#result-text:focus {
